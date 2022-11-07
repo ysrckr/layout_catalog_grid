@@ -1,3 +1,12 @@
 @mixin transition($type) {
   transition: $type 300ms ease-in-out;
 }
+
+@mixin max-width($size) {
+  @if ($size == "large") {
+    max-width: 4 * $card-width + 3 * $card-gap;
+  }
+  @else {
+    max-width: 2 * $card-width + 1 * $card-gap;
+  }
+}
